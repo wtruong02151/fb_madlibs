@@ -20,7 +20,7 @@ var conf = {
   // You have to set http://localhost:3000/ as your website
   // using Settings -> Add platform -> Website
   // , redirect_uri:   'http://localhost:8080/auth'
-  , redirect_uri:   'https://fb-adlibs.herokuapp.com/'
+  , redirect_uri:   'https://fb-adlibs.herokuapp.com/auth'
 };
 
 app.use(express.static(__dirname + '/views'));
