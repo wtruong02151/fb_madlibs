@@ -19,7 +19,8 @@ var conf = {
   , scope:          'user_posts'
   // You have to set http://localhost:3000/ as your website
   // using Settings -> Add platform -> Website
-  , redirect_uri:   'http://localhost:8080/auth'
+  // , redirect_uri:   'http://localhost:8080/auth'
+  , redirect_uri:   'https://fb-adlibs.herokuapp.com/'
 };
 
 app.use(express.static(__dirname + '/views'));
@@ -88,7 +89,7 @@ app.post('/addWord', function(req, res) {
 });
 
 //listen at localhost 8080!
-var server = http.createServer(app).listen(8080)
+var server = http.createServer(app).listen(process.env.PORT || 8000)
 
 // Functions for creating dictionary + ad libs
 var nouns = [];
